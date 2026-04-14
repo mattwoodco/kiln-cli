@@ -1,0 +1,6 @@
+{
+  "entryCount": 55,
+  "byKind": { "tool_use": 20, "message": 35 },
+  "toolUses": 20,
+  "gaps": []
+}

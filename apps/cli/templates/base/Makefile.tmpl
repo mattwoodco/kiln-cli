@@ -1,0 +1,16 @@
+.PHONY: up down watch audit chaos
+
+up:
+	docker compose up --build
+
+down:
+	docker compose down
+
+watch:
+	docker compose watch
+
+audit:
+	kiln audit
+
+chaos:
+	kiln chaos run

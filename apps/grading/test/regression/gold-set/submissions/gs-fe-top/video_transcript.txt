@@ -1,0 +1,2 @@
+Walked through the accessible counter component, showed the storybook entries,
+demoed the Playwright test that exercises keyboard focus management.

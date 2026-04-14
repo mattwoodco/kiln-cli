@@ -1,0 +1,29 @@
+name: kiln-backend-cohort
+version: backend-v1
+description: Backend-weighted rubric — favours Resilience and CodeCraft.
+criteria:
+  - key: ships
+    label: Ships
+    weight: 0.2
+    max_points: 25
+    description: Build + tests must green.
+  - key: resilience
+    label: Resilience
+    weight: 0.3
+    max_points: 25
+    description: Hidden-set chaos experiments must pass.
+  - key: codecraft
+    label: CodeCraft
+    weight: 0.25
+    max_points: 20
+    description: Sonar metrics within thresholds, tests cover code.
+  - key: ai_usage
+    label: AiUsage
+    weight: 0.1
+    max_points: 15
+    description: Structured, cited prompts and tool-use.
+  - key: communication
+    label: Communication
+    weight: 0.15
+    max_points: 15
+    description: README, video, spec present and clear.

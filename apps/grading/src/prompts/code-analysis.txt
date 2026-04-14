@@ -1,0 +1,38 @@
+Code analysis — Code Craft axis.
+
+You are evaluating the submission's code quality against the Code Craft
+criteria in the rubric. You have two evidence sources:
+
+  1. SonarQube metrics (structured JSON, already parsed):
+     - complexity, cognitive_complexity
+     - duplication_pct
+     - code_smells, bugs, vulnerabilities, security_hotspots
+     - coverage_pct, lines_of_code
+     - sqale_rating, maintainability_rating, reliability_rating,
+       security_rating
+
+  2. Source code files (inlined below).
+
+How to reason:
+
+  - Start from the SonarQube evidence. Each numeric metric either
+    supports a point deduction, supports a point award, or is neutral.
+    Every numeric claim you make must cite the specific metric and,
+    where applicable, the file the metric flags.
+
+  - Do not over-weight a single metric. A codebase with high complexity
+    but thorough tests and clean bug counts may still score well. A
+    codebase with zero Sonar findings but obvious structural problems
+    may still score poorly.
+
+  - Spot-check the Sonar findings against the source. If Sonar flags a
+    bug in a file you can read, cite the file and line. If Sonar flags
+    something you cannot verify, note the uncertainty.
+
+  - Return structured per-criterion feedback. For each Code Craft
+    sub-criterion, produce `{ key, awarded_points, max_points, rationale,
+    citations[] }`. Citations must reference either a Sonar metric
+    (`{ kind: "sonar", ref, excerpt }`) or a file
+    (`{ kind: "file", ref, line }`).
+
+Respond as JSON only.

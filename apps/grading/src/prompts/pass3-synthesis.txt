@@ -1,0 +1,32 @@
+Pass 3 — Synthesis.
+
+You have the Pass 1 extraction ledger and the Pass 2 pointwise rubric
+scores. Produce the final grading one-sheet.
+
+Rules:
+
+  - Sum the per-criterion points (weighted) into an overall score. Map
+    the overall score to a letter grade using the scale the rubric
+    declares; if the rubric does not declare one, use 90/80/70/60 cutoffs
+    for A/B/C/D and F below 60.
+
+  - Produce exactly 3–5 talking points. Each talking point must target
+    the student's next improvement — never generic praise, never piled-on
+    criticism. Rank by impact.
+
+  - Populate `ai_usage_analysis` from the harness-log summary. Report
+    sophistication honestly — a submission with ten tool calls and no
+    reflection is "basic," not "expert."
+
+  - Populate `evaluation_coverage` with honest numbers. If SonarQube
+    failed to run, set `sonar_included: false` and note it.
+
+  - If the submission was early-stage (no hidden-set chaos results), the
+    Resilience section must be tagged `"dress_rehearsal"`.
+
+  - Validate every citation post-generation — every citation ref must be
+    reachable from the provided evidence bundle. Drop unreachable
+    citations and lower confidence rather than fabricating.
+
+Output must conform to the OneSheetSchema. Respond as JSON only. Do not
+include commentary outside the JSON object.

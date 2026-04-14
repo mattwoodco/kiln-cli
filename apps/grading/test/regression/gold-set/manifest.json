@@ -1,0 +1,119 @@
+{
+  "version": "1",
+  "generated_at": "2026-04-14",
+  "submissions": [
+    {
+      "id": "gs-be-top",
+      "cohortName": "backend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-backend.yml",
+      "rubricVersion": "backend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-01",
+      "expected_scores": {
+        "Ships": 22,
+        "Resilience": 22,
+        "CodeCraft": 18,
+        "AiUsage": 13,
+        "Communication": 13
+      }
+    },
+    {
+      "id": "gs-be-mid",
+      "cohortName": "backend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-backend.yml",
+      "rubricVersion": "backend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-02",
+      "expected_scores": {
+        "Ships": 17,
+        "Resilience": 15,
+        "CodeCraft": 14,
+        "AiUsage": 10,
+        "Communication": 10
+      }
+    },
+    {
+      "id": "gs-be-low",
+      "cohortName": "backend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-backend.yml",
+      "rubricVersion": "backend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-03",
+      "expected_scores": {
+        "Ships": 8,
+        "Resilience": 5,
+        "CodeCraft": 6,
+        "AiUsage": 4,
+        "Communication": 5
+      }
+    },
+    {
+      "id": "gs-be-edge-early",
+      "cohortName": "backend-cohort-01",
+      "weekNumber": 2,
+      "rubric": "rubric-backend.yml",
+      "rubricVersion": "backend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-04",
+      "stage": "early",
+      "expected_scores": {
+        "Ships": 19,
+        "Resilience": 0,
+        "CodeCraft": 16,
+        "AiUsage": 11,
+        "Communication": 12
+      }
+    },
+    {
+      "id": "gs-fe-top",
+      "cohortName": "frontend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-frontend.yml",
+      "rubricVersion": "frontend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-05",
+      "expected_scores": {
+        "Ships": 21,
+        "Resilience": 19,
+        "CodeCraft": 17,
+        "AiUsage": 14,
+        "Communication": 14
+      }
+    },
+    {
+      "id": "gs-fe-mid",
+      "cohortName": "frontend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-frontend.yml",
+      "rubricVersion": "frontend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-06",
+      "expected_scores": {
+        "Ships": 16,
+        "Resilience": 13,
+        "CodeCraft": 13,
+        "AiUsage": 11,
+        "Communication": 12
+      }
+    },
+    {
+      "id": "gs-fe-low",
+      "cohortName": "frontend-cohort-01",
+      "weekNumber": 1,
+      "rubric": "rubric-frontend.yml",
+      "rubricVersion": "frontend-v1",
+      "grader": "mw",
+      "graded_at": "2026-04-07",
+      "expected_scores": {
+        "Ships": 9,
+        "Resilience": 6,
+        "CodeCraft": 7,
+        "AiUsage": 5,
+        "Communication": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+Pass 1 — Extraction.
+
+You are reading a student submission for the first time. Your only job on
+this pass is to build a factual ledger of what the submission contains. Do
+not score anything yet. Do not compare to the rubric yet.
+
+Extract, in order:
+
+  1. Repository layout — top-level directories and their purpose. Flag any
+     required file that is missing (Dockerfile, docker-compose.yml,
+     README.md, tests directory, .kiln/ directory).
+
+  2. Runtime behavior — infer what the service does from source. Record
+     the framework, entry points, and any notable patterns
+     (circuit breakers, retries, timeouts, bulkheads).
+
+  3. Test surface — list test files, test counts by category (unit,
+     integration, chaos), and any obviously missing coverage.
+
+  4. Harness log signal — summarize the normalized harness-log entries
+     provided. Count interactions by kind, note tool use patterns, flag
+     gaps in the log chain.
+
+  5. Chaos outcomes — summarize the visible-set chaos results. If
+     hidden-set results are present, summarize them separately. Never mix
+     the two sets.
+
+  6. Observations — anything noteworthy for the next pass: odd imports,
+     commented-out code, suspicious commit messages, test skips.
+
+Respond as structured JSON with one top-level key per numbered section.
+Every factual claim must include a citation. If you cannot cite, omit
+the claim.

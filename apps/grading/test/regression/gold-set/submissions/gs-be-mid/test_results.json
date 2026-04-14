@@ -1,0 +1,10 @@
+{
+  "visible": [
+    { "id": "e1", "verdict": "pass", "duration_ms": 180 }
+  ],
+  "hidden": [
+    { "id": "h1", "verdict": "fail", "duration_ms": 420 }
+  ],
+  "testSuitesPassed": 1,
+  "testSuitesFailed": 1
+}

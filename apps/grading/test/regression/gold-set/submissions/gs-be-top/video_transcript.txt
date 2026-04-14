@@ -1,0 +1,3 @@
+I walked through the circuit breaker implementation, showed the dashboard under
+load, and explained how I used Claude Code to generate the test suite. Hidden
+chaos at 900ms latency passed without flaps.

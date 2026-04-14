@@ -1,0 +1,6 @@
+{
+  "entryCount": 18,
+  "byKind": { "tool_use": 3, "message": 15 },
+  "toolUses": 3,
+  "gaps": ["no tool use between T+00:20:00 and T+00:55:00"]
+}

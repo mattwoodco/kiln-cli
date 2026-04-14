@@ -1,0 +1,12 @@
+# kiln chaos-config — steady-state endpoints for the week's project.
+steady_state:
+  endpoints:
+    - name: health
+      method: GET
+      url: http://app:8080/health
+      expect_status: 200
+  duration_seconds: 60
+
+experiments:
+  # Filled in by `kiln chaos run`.
+  []

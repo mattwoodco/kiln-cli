@@ -1,0 +1,50 @@
+stages: [build, test, regression]
+
+# Phase 8: one canonical script lives in `package.json#scripts.ci` so both
+# local dev (`bun run ci`) and GitLab runners execute the exact same
+# pipeline. Keeps drift to zero.
+
+build:
+  stage: build
+  image: oven/bun:1
+  script:
+    - bun install --frozen-lockfile
+    - bunx turbo build --filter='@kiln/*'
+
+test:
+  stage: test
+  image: oven/bun:1
+  script:
+    - bun run ci
+
+# Regression stage — prompt drift, schema drift, checkpoint prompts, dispatch
+# code paths. Any PR touching these files must pass the gold-set regression
+# suite before merge.
+regression:
+  stage: regression
+  image: oven/bun:1
+  script:
+    - bun install --frozen-lockfile
+    - bunx vitest run --project regression --root apps/grading
+  rules:
+    - changes:
+        # Grading prompts + activities
+        - apps/grading/src/prompts/**
+        - apps/grading/src/activities/generate-one-sheet.ts
+        - apps/grading/src/activities/analyze-code.ts
+        # Checkpoint prompts + activities (Phase 6)
+        - apps/grading/src/activities/generate-checkpoint-report.ts
+        - apps/grading/src/activities/analyze-code-light.ts
+        # Dispatch activities (Phase 7.5) — related because prompt changes
+        # that alter the one-sheet shape cascade into dispatch payloads.
+        - apps/grading/src/activities/dispatch/**
+        - apps/grading/src/workflows/dispatch-artifacts.ts
+        - apps/grading/src/workflows/dispatch-single-target.ts
+        # Shared schema surface
+        - packages/shared/src/schemas/one-sheet.ts
+        - packages/shared/src/schemas/checkpoint.ts
+        - packages/shared/src/schemas/dispatch.ts
+        - packages/shared/src/schemas/rubric.ts
+        # The gold-set itself (so adding a new submission re-runs the suite)
+        - apps/grading/test/regression/**
+  allow_failure: false

@@ -1,0 +1,38 @@
+{
+  "name": "@kiln/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "kiln": "./bin/run.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["bin", "dist", "oclif.manifest.json"],
+  "oclif": {
+    "bin": "kiln",
+    "dirname": "kiln",
+    "commands": "./dist/commands",
+    "topicSeparator": " "
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "biome check src",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.88.0",
+    "@clack/prompts": "^0.8.2",
+    "@kiln/shared": "workspace:*",
+    "@oclif/core": "^4.0.33",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.3.12",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.4"
+  }
+}

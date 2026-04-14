@@ -1,0 +1,30 @@
+Pass 2 — Pointwise rubric evaluation.
+
+You now have the extraction ledger from Pass 1. Walk the rubric criterion
+by criterion. For each criterion:
+
+  - Assign a score in [0, max_points] for the criterion.
+  - Write a two-to-four sentence rationale citing specific evidence from
+    the Pass 1 ledger. Every rationale must include at least one citation.
+  - If the criterion has sub-criteria, score each sub-criterion separately
+    and sum to the criterion score.
+  - If evidence is missing, score conservatively and explain why.
+
+Resilience axis (typically 25% of the grade) — special rule:
+
+  The Resilience criterion MUST be scored primarily from hidden-set chaos
+  results when they are present in the Pass 1 ledger. The visible set is
+  student-runnable and therefore prone to overfitting — treat visible-set
+  PASS/FAIL as a sanity check only. If hidden-set results are absent
+  (the submission was an "early" stage dress rehearsal), mark the
+  Resilience section `"dress_rehearsal"` and note that the hidden-set run
+  will determine the final Resilience score.
+
+Code Craft axis — use SonarQube metrics as structured evidence. Low
+complexity alone does not guarantee high scores; high complexity alone
+does not guarantee low scores. Cite the specific metric and the relevant
+source file together.
+
+Do not synthesize an overall grade on this pass. Output each criterion
+as its own JSON object with `{ criterion, awarded_points, max_points,
+weight, rationale, citations[], sub_scores[] }`.

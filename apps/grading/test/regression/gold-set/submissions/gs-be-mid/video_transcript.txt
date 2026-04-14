@@ -1,0 +1,2 @@
+Walked through the order endpoint. Talked about retry policy but didn't
+demonstrate hidden chaos. Build greens but tests are thin.
